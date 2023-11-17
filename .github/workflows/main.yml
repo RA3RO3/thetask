@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'print'
-        run: ls
+      
 
       - uses: actions/checkout@v3
+      - name: 'print'
+        run: ls
