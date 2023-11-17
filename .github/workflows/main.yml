@@ -12,8 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
-
       - uses: actions/checkout@v3
-      - name: 'print'
-        run: ls
+
+      - name: "Dockerlog"
+        run: docker login --username  ${{ secrets.DOCKER_USER }} --password ${{ secrets.DOCKER_PASS }}
+
+      - name: "imageBuild"
+        run: docker build -t ${{ secrets.DOCKER_USER }}/TheImage .
+
+      - name: "Dockerpush"
+        run: docker push ${{ secrets.DOCKER_USER }}/TheImage
