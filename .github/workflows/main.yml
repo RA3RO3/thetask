@@ -18,7 +18,7 @@ jobs:
         run: docker login --username  ${{ secrets.DOCKER_USER }} --password ${{ secrets.DOCKER_PASS }}
 
       - name: "imageBuild"
-        run: docker build -t ${{ secrets.DOCKER_USER }}/TheImage .
+        run: docker build -t ${{ secrets.DOCKER_USER }}/Mustafa .
 
       - name: "Dockerpush"
-        run: docker push ${{ secrets.DOCKER_USER }}/TheImage
+        run: docker push ${{ secrets.DOCKER_USER }}/Mustafa
