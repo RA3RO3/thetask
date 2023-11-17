@@ -12,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 'aloo'
-        run: pwd
+      - name: 'print'
+        run: ls
 
-      - name: 'alooo'
-        run: echo ra3
+      - uses: actions/checkout@v3
